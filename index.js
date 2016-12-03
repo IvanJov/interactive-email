@@ -7,10 +7,10 @@ const auth = JSON.parse(fs.readFileSync('.env', {encoding: 'utf8'}));
 const transporter = nodemailer.createTransport(mg(auth));
 
 var mailOptions = {
-  from: '"Me ?" <testing.interactive.email@gmail.com>',
+  from: '"Me" <testing.interactive.email@gmail.com>',
   to: 'testing.interactive.email@gmail.com',
   subject: 'Hello',
-  html: fs.readFileSync('email.html', {encoding: 'utf8'})
+  html: fs.readFileSync('rollover.html', {encoding: 'utf8'})
 };
 
 transporter.sendMail(mailOptions, function(error, info){
