@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <style>
-        .rollover {
-            margin-bottom: 10px;
-            width: 400px;
-            height:260px;
-            display:block;
-            background:transparent url('https://www.google.com/intl/en_com/images/srpr/logo3w.png') center top no-repeat;
-        }
+        .rollover:hover > img,
+        * [summary=rollover]:hover > img { max-height: 0px !important; }
 
-        .rollover:hover {
-            background-image: url('https://www.google.rs/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png');
-        }
+        .rollover:hover > div img,
+        * [summary=rollover]:hover > div img{ max-height: none !important; }
     </style>
 </head>
 <body>
-    <div class="rollover"></div>
+    <a class="rollover" summary="rollover" href="http://nike.com">
+        <img src="http://freshinbox.com/tools/rollover/images/shoe-rollover.jpg" width="400" style="display:block;width:100%;" alt="Nike Shoes" border="0">
+        <div style="mso-hide:all;"><img src="http://freshinbox.com/tools/rollover/images/shoe-rollover-alt.jpg" style="max-height:0px;display:block;width:100%;" width="400" alt="" border="0"></div>
+    </a>
 </body>
 </html>
