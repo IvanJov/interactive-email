@@ -9,9 +9,8 @@ const transporter = nodemailer.createTransport(mg(auth));
 var mailOptions = {
   from: '"Me ?" <testing.interactive.email@gmail.com>',
   to: 'testing.interactive.email@gmail.com',
-  subject: 'Hello ✔',
-  text: 'Hello world ?',
-  html: '<b>Hello world ?</b>'
+  subject: 'Hello',
+  html: fs.readFileSync('email.html', {encoding: 'utf8'})
 };
 
 transporter.sendMail(mailOptions, function(error, info){
